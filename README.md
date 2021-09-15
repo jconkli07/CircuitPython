@@ -11,6 +11,9 @@
 ## Hello_CircuitPython
 
 ### Description & Code
+
+```python
+
 Description goes here
 
 import board
@@ -28,9 +31,6 @@ while True:
     time.sleep(.5)
     dot.fill((0, 0, 255))
     time.sleep(.5)
-
-```python
-Code goes here
 
 ```
 
