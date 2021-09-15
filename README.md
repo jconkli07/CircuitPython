@@ -13,7 +13,21 @@
 ### Description & Code
 Description goes here
 
-Here's how you make code look like code:
+import board
+import neopixel
+import time
+
+dot = neopixel.NeoPixel(board.NEOPIXEL, 1)
+
+print("Make it red!")
+
+dot.brightness = 0.1
+
+while True:
+    dot.fill((255, 0, 0))
+    time.sleep(.5)
+    dot.fill((0, 0, 255))
+    time.sleep(.5)
 
 ```python
 Code goes here
