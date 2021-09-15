@@ -36,7 +36,7 @@ while True:
 
 
 ### Evidence
-Pictures / Gifs of your work should go here.  You need to communicate what your thing does.
+
 
 ### Wiring
 Make an account with your google ID at [tinkercad.com](https://www.tinkercad.com/learn/circuits), and use "TinkerCad Circuits to make a wiring diagram."  It's really easy!  
@@ -58,6 +58,7 @@ Code goes here
 ```
 
 ### Evidence
+![Servo Rotating](https://github.com/jconkli07/CircuitPython/blob/5e9450a07326bc7dca9aa972ea3f7279d5cec847/Files/servo.gif)
 
 ### Wiring
 
