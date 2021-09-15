@@ -12,9 +12,9 @@
 
 ### Description & Code
 
-```python
-
 Description goes here
+
+```python
 
 import board
 import neopixel
