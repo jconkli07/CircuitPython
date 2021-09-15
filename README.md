@@ -1,7 +1,6 @@
 # CircuitPython
 
 ## Table of Contents
-* [Table of Contents](#TableOfContents)
 * [Hello_CircuitPython](#Hello_CircuitPython)
 * [CircuitPython_Servo](#CircuitPython_Servo)
 * [CircuitPython_LCD](#CircuitPython_LCD)
@@ -75,7 +74,7 @@ while True:
 ```
 
 ### Evidence
-<img src="https://github.com/jconkli07/CircuitPython/blob/5e9450a07326bc7dca9aa972ea3f7279d5cec847/Files/servo.gif" width="25%" height="25%"/>
+<img src="https://github.com/jconkli07/CircuitPython/blob/257c87a8d6ec9e9c94ec38cb0a5d9c428ffa05db/Files/Servo%20wiring.png" width="25%" height="25%"/>
 
 ### Wiring
 
