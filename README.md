@@ -62,6 +62,8 @@ Code goes here
 
 ### Wiring
 
+<img src="https://github.com/jconkli07/CircuitPython/blob/5e9450a07326bc7dca9aa972ea3f7279d5cec847/Files/servo.gif" width="50%" height="50%"/>
+
 ### Reflection
 
 
