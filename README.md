@@ -30,7 +30,7 @@ dot.brightness = 0.1
 while True:
     dot.fill((255, 0, 0))
     time.sleep(.5)
-    dot.fill((0, 255, 0))
+    dot.fill((0, 0, 255))
     time.sleep(.5)
 
 ```
@@ -54,14 +54,12 @@ What went wrong / was challenging, how'd you figure it out, and what did you lea
 
 ```python
 
-#Jay Conklin
-#Makes a servo rotate 180 degrees
+# Jay Conklin
+# Makes a servo rotate 180 degrees
 import time
 import board
 import pwmio
 import servo
-import neopixel
-
 pwm = pwmio.PWMOut(board.A2, duty_cycle=2 ** 15, frequency=50)
 
 my_servo = servo.Servo(pwm)
