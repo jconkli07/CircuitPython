@@ -15,6 +15,8 @@ Description goes here
 
 ```python
 
+//Jay Conklin
+//Makes the LED blink red and blue
 import board
 import neopixel
 import time
@@ -28,7 +30,7 @@ dot.brightness = 0.1
 while True:
     dot.fill((255, 0, 0))
     time.sleep(.5)
-    dot.fill((0, 0, 255))
+    dot.fill((0, 255, 0))
     time.sleep(.5)
 
 ```
