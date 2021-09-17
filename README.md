@@ -15,8 +15,8 @@ Description goes here
 
 ```python
 
-//Jay Conklin
-//Makes the LED blink red and blue
+#Jay Conklin
+#Makes the LED blink red and blue
 import board
 import neopixel
 import time
@@ -54,6 +54,8 @@ What went wrong / was challenging, how'd you figure it out, and what did you lea
 
 ```python
 
+#Jay Conklin
+#Makes a servo rotate 180 degrees
 import time
 import board
 import pwmio
