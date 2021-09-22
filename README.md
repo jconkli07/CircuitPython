@@ -87,6 +87,8 @@ This assignment was a bit harder than the first one. I looked up the code and th
 ### Description & Code
 
 ```python
+# Jay Conklin
+# Makes the built-in LED change colors based on how far an object is from the distance sensor.
 import adafruit_hcsr04
 import time
 import board
