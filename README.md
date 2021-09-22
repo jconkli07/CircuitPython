@@ -43,10 +43,8 @@ while True:
 Nothing needed except for Neopixel board.
 
 ### Reflection
-What went wrong / was challenging, how'd you figure it out, and what did you learn from that experience?  Your ultimate goal for the reflection is to pass on knowledge that will make this assignment better or easier for the next person.
 
-
-
+This was a pretty easy assignment for me, I found the code on the internet and modified it a little bit. I had some issues with learning how to save the files and make them run on the board but I figured them out by asking my classmates.
 
 ## CircuitPython_Servo
 
@@ -82,16 +80,36 @@ while True:
 
 ### Reflection
 
+This assignment was a bit harder than the first one. I looked up the code and the wiring, but I think that next time I could do it myself. I had an issue with the wires being in the same pin as the code said they were in, but I used the feedback on the serial monitor to identify the problem.
 
-
-
-## CircuitPython_LCD
+## CircuitPython_Distance_Sensor
 
 ### Description & Code
 
 ```python
-Code goes here
+# Jay Conklin
+# Makes the built-in LED change colors based on how far an object is from the distance sensor.
+import adafruit_hcsr04
+import time
+import board
+import neopixel
 
+sonar = adafruit_hcsr04.HCSR04(trigger_pin=board.D2, echo_pin=board.D3)
+dot = neopixel.NeoPixel(board.NEOPIXEL, 1)
+
+dot.brightness = 0.1
+
+while True:
+    try:
+        dist = sonar.distance
+        print((dist))
+        r = max(min(15*(20-dist),255),0)
+        g = max(min(15*(dist-20),255),0)
+        b = max(min(-abs(15*(20-dist))+225,255),0)
+        dot.fill((int(r), int(g), int(b)))
+    except RuntimeError:
+        print("Retrying!")
+    time.sleep(0.1)
 ```
 
 ### Evidence
@@ -104,7 +122,7 @@ Code goes here
 
 
 
-## NextAssignment
+## CircuitPython_LCD
 
 ### Description & Code
 
