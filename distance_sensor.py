@@ -14,9 +14,9 @@ while True:
     try:
         dist = sonar.distance
         print((dist))
-        r = max(min(15*(20-dist),255),0)
-        g = max(min(15*(dist-20),255),0)
-        b = max(min(-abs(15*(20-dist))+225,255),0)
+        r = max(min(17*(20-dist),255),0)
+        g = max(min(17*(dist-20),255),0)
+        b = max(min(-abs(17*(20-dist))+225,255),0)
         dot.fill((int(r), int(g), int(b)))
     except RuntimeError:
         print("Retrying!")
