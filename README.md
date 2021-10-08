@@ -216,7 +216,7 @@ while True:
 ```
 
 ### Evidence
-<img src="https://github.com/jconkli07/CircuitPython/blob/bc8618933dd1df674c97ab04eacac412698359b3/Files/led%20blink.gif" width="25%" height="25%"/>
+<img src="https://github.com/jconkli07/CircuitPython/blob/113ffd12f4a13388e2e827ff222791c589bd1f18/Files/lcd.gif" width="25%" height="25%"/>
 
 ### Wiring
 
