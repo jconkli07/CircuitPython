@@ -159,7 +159,7 @@ while True:
 ```
 
 ### Evidence
-<img src="https://github.com/jconkli07/CircuitPython/blob/bc8618933dd1df674c97ab04eacac412698359b3/Files/led%20blink.gif" width="25%" height="25%"/>
+<img src="https://github.com/jconkli07/CircuitPython/blob/f3b06030b189e906cf269fa30414013dc1e97042/Files/photointerrupter.gif" width="25%" height="25%"/>
 
 ### Wiring
 
