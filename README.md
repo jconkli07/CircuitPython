@@ -170,7 +170,8 @@ while True:
 
 ```python
 #Jay Conklin
-#Displays a count on the LCD that increases once every time a wire is touched. If a different wire is touched it changes it to counting down instead of up, or vice versa
+#Displays a count on the LCD that increases once every time a wire is touched.
+#If a different wire is touched it changes it to counting down instead of up, or vice versa
 import board
 from lcd.lcd import LCD
 from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
