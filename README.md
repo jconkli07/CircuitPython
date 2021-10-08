@@ -3,8 +3,9 @@
 ## Table of Contents
 * [Hello_CircuitPython](#Hello_CircuitPython)
 * [CircuitPython_Servo](#CircuitPython_Servo)
+* [CircuitPython_Distance_Sensor](#CircuitPython_Distance_Sensor)
+* [CircuitPython_Photointerrupter](#CircuitPython_Photointerrupter)
 * [CircuitPython_LCD](#CircuitPython_LCD)
-* [NextAssignmentGoesHere](#NextAssignment)
 ---
 
 ## Hello_CircuitPython
@@ -103,9 +104,9 @@ while True:
     try:
         dist = sonar.distance
         print((dist))
-        r = max(min(15*(20-dist),255),0)
-        g = max(min(15*(dist-20),255),0)
-        b = max(min(-abs(15*(20-dist))+225,255),0)
+        r = max(min(17*(20-dist),255),0)
+        g = max(min(17*(dist-20),255),0)
+        b = max(min(-abs(17*(20-dist))+225,255),0)
         dot.fill((int(r), int(g), int(b)))
     except RuntimeError:
         print("Retrying!")
@@ -119,7 +120,48 @@ while True:
 ### Reflection
 
 
+## CircuitPython_Photointerrupter
 
+### Description & Code
+
+```python
+#Jay Conklin
+#Counts up the photointerrupter interruptions and displays the count every 4 seconds
+
+import digitalio
+import time
+import board
+from digitalio import DigitalInOut, Direction, Pull
+
+interrupter = DigitalInOut(board.D2)
+interrupter.direction = Direction.INPUT
+interrupter.pull = Pull.UP
+initial = time.monotonic()
+
+counter = 0
+
+photo = False
+state = False
+
+start=time.monotonic()
+
+while True:
+    photo=interrupter.value
+    if photo and not state:
+        counter+=1
+    state = photo
+    
+    math = time.monotonic()/4
+    if math-int(math)==0:
+        print("The number of Interrupts is ", str(counter))
+        time.sleep(.001)
+```
+
+### Evidence
+
+### Wiring
+
+### Reflection
 
 
 ## CircuitPython_LCD
@@ -127,8 +169,48 @@ while True:
 ### Description & Code
 
 ```python
-Code goes here
+#Jay Conklin
+#Displays a count on the LCD that increases once every time a wire is touched.
+#If a different wire is touched it changes it to counting down instead of up, or vice versa.
+import board
+from lcd.lcd import LCD
+from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
+import time
+import touchio
 
+i2c = board.I2C()
+lcd = LCD(I2CPCF8574Interface(i2c, 0x3f), num_rows=2, num_cols=16)
+
+touch_a5 = board.A5
+touch_A5 = touchio.TouchIn(touch_a5)
+touch_a0 = board.A0
+touch_A0 = touchio.TouchIn(touch_a0)
+
+count = 0
+updown=1
+
+while True:
+    if touch_A5.value:
+        count+=updown
+        lcd.clear()
+        if updown==1:
+            lcd.print("Up: ")
+        else:
+            lcd.print("Down: ")
+        lcd.print(str(count))
+        while touch_A5.value:
+            time.sleep(.01)
+
+    if touch_A0.value:
+        updown=-updown
+        while touch_A0.value:
+            time.sleep(.1)
+        lcd.clear()
+        if updown==1:
+            lcd.print("Up: ")
+        else:
+            lcd.print("Down: ")
+        lcd.print(str(count))
 ```
 
 ### Evidence
