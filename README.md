@@ -117,7 +117,7 @@ while True:
 <img src="https://github.com/jconkli07/CircuitPython/blob/af79cffc5f3bd86c43225dd5d83688da25afce92/Files/distance_sensor.gif" width="25%" height="25%"/>
 
 ### Wiring
-<img src="https://github.com/jconkli07/CircuitPython/blob/7cb2f765f1fe9c35ad9e4fabf7c335f3b1d86759/Files/photointerrupter_wiring.png" width="25%" height="25%"/>
+<img src="https://github.com/jconkli07/CircuitPython/blob/8eb1d31a7b16f5f39595933d09eee7c5872549c2/Files/distance_sensor_wiring.png" width="25%" height="25%"/>
 
 ### Reflection
 
