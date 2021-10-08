@@ -114,7 +114,7 @@ while True:
 ```
 
 ### Evidence
-<img src="https://github.com/jconkli07/CircuitPython/blob/bc8618933dd1df674c97ab04eacac412698359b3/Files/led%20blink.gif" width="25%" height="25%"/>
+<img src="https://github.com/jconkli07/CircuitPython/blob/af79cffc5f3bd86c43225dd5d83688da25afce92/Files/distance_sensor.gif" width="25%" height="25%"/>
 
 ### Wiring
 
@@ -216,7 +216,7 @@ while True:
 ```
 
 ### Evidence
-<img src="https://github.com/jconkli07/CircuitPython/blob/bc8618933dd1df674c97ab04eacac412698359b3/Files/led%20blink.gif" width="25%" height="25%"/>
+<img src="https://github.com/jconkli07/CircuitPython/blob/113ffd12f4a13388e2e827ff222791c589bd1f18/Files/lcd.gif" width="25%" height="25%"/>
 
 ### Wiring
 
