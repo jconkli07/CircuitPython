@@ -221,6 +221,6 @@ while True:
 <img src="https://github.com/jconkli07/CircuitPython/blob/113ffd12f4a13388e2e827ff222791c589bd1f18/Files/lcd.gif" width="25%" height="25%"/>
 
 ### Wiring
-<img src="https://github.com/jconkli07/CircuitPython/blob/7cb2f765f1fe9c35ad9e4fabf7c335f3b1d86759/Files/photointerrupter_wiring.png" width="25%" height="25%"/>
+<img src="https://github.com/jconkli07/CircuitPython/blob/fcf6362f6df3a11c4990f65ba9b9aac7934d2dc5/Files/lcd_wiring.png" width="25%" height="25%"/>
 
 ### Reflection
