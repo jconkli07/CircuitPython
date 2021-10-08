@@ -117,6 +117,7 @@ while True:
 <img src="https://github.com/jconkli07/CircuitPython/blob/af79cffc5f3bd86c43225dd5d83688da25afce92/Files/distance_sensor.gif" width="25%" height="25%"/>
 
 ### Wiring
+<img src="https://github.com/jconkli07/CircuitPython/blob/7cb2f765f1fe9c35ad9e4fabf7c335f3b1d86759/Files/photointerrupter_wiring.png" width="25%" height="25%"/>
 
 ### Reflection
 
@@ -162,6 +163,7 @@ while True:
 <img src="https://github.com/jconkli07/CircuitPython/blob/f3b06030b189e906cf269fa30414013dc1e97042/Files/photointerrupter.gif" width="25%" height="25%"/>
 
 ### Wiring
+<img src="https://github.com/jconkli07/CircuitPython/blob/7cb2f765f1fe9c35ad9e4fabf7c335f3b1d86759/Files/photointerrupter_wiring.png" width="25%" height="25%"/>
 
 ### Reflection
 
@@ -219,5 +221,6 @@ while True:
 <img src="https://github.com/jconkli07/CircuitPython/blob/113ffd12f4a13388e2e827ff222791c589bd1f18/Files/lcd.gif" width="25%" height="25%"/>
 
 ### Wiring
+<img src="https://github.com/jconkli07/CircuitPython/blob/7cb2f765f1fe9c35ad9e4fabf7c335f3b1d86759/Files/photointerrupter_wiring.png" width="25%" height="25%"/>
 
 ### Reflection
