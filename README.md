@@ -224,4 +224,4 @@ while True:
 <img src="https://github.com/jconkli07/CircuitPython/blob/fcf6362f6df3a11c4990f65ba9b9aac7934d2dc5/Files/lcd_wiring.png" width="25%" height="25%"/>
 
 ### Reflection
-This assignment was pretty complicated but I actually got it done pretty quickly. This is because it worked pretty much the first time I ran my code, so I didn't have to do much debugging. This was the first time that I have used capacitative touch and I thought that it was really cool.
+This assignment was pretty complicated but I actually got it done relatively quickly. This is because it worked pretty much the first time I ran my code, so I didn't have to do much debugging. This was the first time that I have used capacitative touch and I thought that it was really cool.
