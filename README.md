@@ -43,7 +43,7 @@ Nothing needed except for Neopixel board.
 
 ### Reflection
 
-This was a pretty easy assignment for me, I found the code on the internet and modified it a little bit. I had some issues with learning how to save the files and make them run on the board but I figured them out by asking my classmates.
+This was a pretty easy assignment for me, I found the code on the internet and modified it a little bit. I had some issues with learning how to save the files and make them run on the board but I figured them out by asking my classmates. Importing libraries helps to add functionalities, for example importing time allows the program to be able to pause for a set amount of time.
 
 ## CircuitPython_Servo
 
@@ -78,7 +78,7 @@ while True:
 
 ### Reflection
 
-This assignment was a bit harder than the first one. I looked up the code and the wiring, but I think that next time I could do it myself. I had an issue with the wires being in the same pin as the code said they were in, but I used the feedback on the serial monitor to identify the problem.
+This assignment was a bit harder than the first one. I looked up the code and the wiring, but I think that next time I could do it myself. I had an issue with the wires not being in the same pin as the code said they were in, but I used the feedback on the serial monitor to identify the problem. The errors on the serial monitor are helpful for debugging the code. for loops are used to repeat a chunk of code a certaina mount of times.
 
 ## CircuitPython_Distance_Sensor
 
@@ -117,7 +117,7 @@ while True:
 <img src="https://github.com/jconkli07/CircuitPython/blob/8eb1d31a7b16f5f39595933d09eee7c5872549c2/Files/distance_sensor_wiring.png" width="25%" height="25%"/>
 
 ### Reflection
-I had some issues because you cannot use float values in dot.fill() so it was giving me errors. max(x,y) outputs whichever number is highest, min(x,y) does opposite. I was able to reuse much of the code from the LED blink assignment, and then just add the distance sensor part.
+I had some issues because you cannot use float values in dot.fill() so it was giving me errors. max(x,y) outputs whichever number is highest, min(x,y) does opposite. I was able to reuse much of the code from the LED blink assignment, and then just add the distance sensor part. int(x) outputs x converted to an integer (it drops any decimals, for example 4.15 becomes 4).
 
 ## CircuitPython_Photointerrupter
 
@@ -223,4 +223,4 @@ while True:
 <img src="https://github.com/jconkli07/CircuitPython/blob/fcf6362f6df3a11c4990f65ba9b9aac7934d2dc5/Files/lcd_wiring.png" width="25%" height="25%"/>
 
 ### Reflection
-This assignment was pretty complicated but I actually got it done relatively quickly. This is because it worked pretty much the first time I ran my code, so I didn't have to do much debugging. This was the first time that I have used capacitative touch and I thought that it was really cool.
+This assignment was pretty complicated but I actually got it done relatively quickly. This is because it worked pretty much the first time I ran my code, so I didn't have to do much debugging. This was the first time that I have used capacitative touch and I thought that it was really cool. I used lcd.print(str(count)) to print the value of a variable set to a number. lcd.clear() clears lcd. "if touchio.TouchIn(board.A5).value:" will run if the wire in that pin is touched.
