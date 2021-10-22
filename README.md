@@ -43,7 +43,7 @@ Nothing needed except for Neopixel board.
 
 ### Reflection
 
-This was a pretty easy assignment for me, I found the code on the internet and modified it a little bit. I had some issues with learning how to save the files and make them run on the board but I figured them out by asking my classmates. Importing libraries helps to add functionalities, for example importing time allows the program to be able to pause for a set amount of time.
+This was a pretty easy assignment for me, I found the code on the internet and modified it a little bit. I need to only have the main.py saved in the neopixel, the other codes should be saved in a folder on my computer. Saving code runs it on the board. Importing libraries helps to add functionalities, for example importing time allows the program to be able to pause for a set amount of time.
 
 ## CircuitPython_Servo
 
@@ -78,7 +78,7 @@ while True:
 
 ### Reflection
 
-This assignment was a bit harder than the first one. I looked up the code and the wiring, but I think that next time I could do it myself. I had an issue with the wires not being in the same pin as the code said they were in, but I used the feedback on the serial monitor to identify the problem. The errors on the serial monitor are helpful for debugging the code. for loops are used to repeat a chunk of code a certaina mount of times.
+This assignment was a bit harder than the first one. I need to make sure that the wires are in the pin that the code says they are in.. The errors on the serial monitor are helpful for debugging the code. for loops are used to repeat a chunk of code a certain mount of times.
 
 ## CircuitPython_Distance_Sensor
 
@@ -164,7 +164,7 @@ while True:
 <img src="https://github.com/jconkli07/CircuitPython/blob/7cb2f765f1fe9c35ad9e4fabf7c335f3b1d86759/Files/photointerrupter_wiring.png"/>
 
 ### Reflection
-This assignment was pretty wuick because the code that I found on the internet did not require much tweaking to make it work. variable+=x sets variable equal to variable+x. time.monotonic starts counting and then doesn't stop, I used to to determine when 4 seconds had passed.
+I used digitalio to sense the number of interrupts from the photointerrupter. x==y CHECKS whether x=y and returns true of false, x=y sets x equal to y. variable+=x sets variable equal to variable+x. time.monotonic starts counting and then doesn't stop, I used to to determine when 4 seconds had passed.
 
 ## CircuitPython_LCD
 
