@@ -78,7 +78,7 @@ while True:
 
 ### Reflection
 
-This assignment was a bit harder than the first one. I need to make sure that the wires are in the pin that the code says they are in.. The errors on the serial monitor are helpful for debugging the code. for loops are used to repeat a chunk of code a certain mount of times.
+This assignment was a bit harder than the first one. I need to make sure that the wires are in the pin that the code says they are in. The errors on the serial monitor are helpful for debugging the code. for loops are used to repeat a chunk of code a certain mount of times.
 
 ## CircuitPython_Distance_Sensor
 
