@@ -45,7 +45,7 @@ Nothing needed except for Neopixel board.
 
 This was a pretty easy assignment for me, I found the code on the internet and modified it a little bit. I need to only have the main.py saved in the neopixel, the other codes should be saved in a folder on my computer. Saving code runs it on the board. Importing libraries helps to add functionalities, for example importing time allows the program to be able to pause for a set amount of time.
 
-[Back to Table of Contents](#Table_of_Contents)
+[Back to Table of Contents](#Table-of-Contents)
 
 ## CircuitPython_Servo
 
@@ -82,7 +82,7 @@ while True:
 
 This assignment was a bit harder than the first one. I need to make sure that the wires are in the pin that the code says they are in. The errors on the serial monitor are helpful for debugging the code. for loops are used to repeat a chunk of code a certain mount of times.
 
-[Back to Table of Contents](#Table_of_Contents)
+[Back to Table of Contents](#Table-of-Contents)
 
 ## CircuitPython_Distance_Sensor
 
@@ -123,7 +123,7 @@ while True:
 ### Reflection
 I had some issues because you cannot use float values in dot.fill() so it was giving me errors. max(x,y) outputs whichever number is highest, min(x,y) does opposite. I was able to reuse much of the code from the LED blink assignment, and then just add the distance sensor part. int(x) outputs x converted to an integer (it drops any decimals, for example 4.15 becomes 4).
 
-[Back to Table of Contents](#Table_of_Contents)
+[Back to Table of Contents](#Table-of-Contents)
 
 ## CircuitPython_Photointerrupter
 
@@ -172,7 +172,7 @@ while True:
 ### Reflection
 I used digitalio to sense the number of interrupts from the photointerrupter. x==y CHECKS whether x=y and returns true of false, x=y sets x equal to y. variable+=x sets variable equal to variable+x. time.monotonic starts counting and then doesn't stop, I used to to determine when 4 seconds had passed.
 
-[Back to Table of Contents](#Table_of_Contents)
+[Back to Table of Contents](#Table-of-Contents)
 
 ## CircuitPython_LCD
 
@@ -233,4 +233,4 @@ while True:
 ### Reflection
 Capacitative touch can sense when you touch a wire. I used lcd.print(str(count)) to print the value of a variable set to a number. lcd.clear() clears lcd. "if touchio.TouchIn(board.A5).value:" will run if the wire in that pin is touched. 
 
-[Back to Table of Contents](#Table_of_Contents)
+[Back to Table of Contents](#Table-of-Contents)
