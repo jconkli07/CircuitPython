@@ -11,7 +11,7 @@
 ## Hello_CircuitPython
 
 ### Description & Code
-This assignment was to make the LED on the neopixel flash different colors, I chose red and blue.
+This assignment was to make the LED on the neopixel flash different colors, I chose red and blue. The goal was to get used to the MetroExpress and creating/running code on Mu. Also you learn some about the basics of Circuit python like importing libraries.
 
 ```python
 #Jay Conklin
