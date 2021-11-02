@@ -114,7 +114,7 @@ while True:
 
 ### Evidence
 <img src="https://github.com/jconkli07/CircuitPython/blob/af79cffc5f3bd86c43225dd5d83688da25afce92/Files/distance_sensor.gif"/>
-<a src="https://www.desmos.com/calculator/oyaopfyd2x">Link to Desmos graph modeling rbg change</a>
+<a href="https://www.desmos.com/calculator/oyaopfyd2x">Link to Desmos graph modeling rbg change</a>
 
 ### Wiring
 <img src="https://github.com/jconkli07/CircuitPython/blob/8eb1d31a7b16f5f39595933d09eee7c5872549c2/Files/distance_sensor_wiring.png"/>
