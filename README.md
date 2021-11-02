@@ -101,12 +101,15 @@ dot.brightness = 0.1
 
 while True:
     try:
-        dist = sonar.distance
+        dist = sonar.distance   #dist will be the distance of the object from the sensor
         print((dist))
-        r = max(min(17*(20-dist),255),0)
-        g = max(min(17*(dist-20),255),0)
-        b = max(min(-abs(17*(20-dist))+225,255),0)
-        dot.fill((int(r), int(g), int(b)))
+        r = max(min(17*(20-dist),255),0)    #Makes the red value change from 255-0 as the distance goes from 5-20
+                                            #Max and min take the maximum/minimum of the 2 numbers given, they make sure that the output value won't be >255 or <0
+        g = max(min(17*(dist-20),255),0)    #Makes the green value change from 0-255 as the distance goes from 20-35
+        b = max(min(-abs(17*(20-dist))+255,255),0)  #Makes the blue value change go from 0-255 as the distance goes from 0-20
+                                                    #and then makes it go back from 255-0 as the distance goes from 20-35
+        dot.fill((int(r), int(g), int(b)))  #Makes the LED flash the predetermined RGB values
+                                            #and converts the rgb values into ints because it requires int inputs
     except RuntimeError:
         print("Retrying!")
     time.sleep(0.1)
