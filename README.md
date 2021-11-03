@@ -74,7 +74,7 @@ while True:
 <img src="https://github.com/jconkli07/CircuitPython/blob/5e9450a07326bc7dca9aa972ea3f7279d5cec847/Files/servo.gif"/>
 
 ### Wiring
-<img src="https://github.com/jconkli07/CircuitPython/blob/f851906ed627ad6e53e44df6a1b489bf18236723/Files/servo%20wiring.png"/>
+<img src="https://github.com/jconkli07/CircuitPython/blob/62241d3f26ff94e50bd7a05ae380ea1cb6ca0399/Files/servo_wiring.png"/>
 
 ### Reflection
 
@@ -121,7 +121,7 @@ while True:
 <a href="https://www.desmos.com/calculator/2clk5c78xj">Link to Desmos graph modeling rbg change</a>
 
 ### Wiring
-<img src="https://github.com/jconkli07/CircuitPython/blob/8eb1d31a7b16f5f39595933d09eee7c5872549c2/Files/distance_sensor_wiring.png"/>
+<img src=https://github.com/jconkli07/CircuitPython/blob/62241d3f26ff94e50bd7a05ae380ea1cb6ca0399/Files/distance_sensor_wiring.png"/>
 
 ### Reflection
 I had some issues because you cannot use float values in dot.fill() so it was giving me errors. max(x,y) outputs whichever number is highest, min(x,y) does opposite. I was able to reuse much of the code from the LED blink assignment, and then just add the distance sensor part. int(x) outputs x converted to an integer (it drops any decimals, for example 4.15 becomes 4).
@@ -170,7 +170,7 @@ while True:
 <img src="https://github.com/jconkli07/CircuitPython/blob/f3b06030b189e906cf269fa30414013dc1e97042/Files/photointerrupter.gif"/>
 
 ### Wiring
-<img src="https://github.com/jconkli07/CircuitPython/blob/7cb2f765f1fe9c35ad9e4fabf7c335f3b1d86759/Files/photointerrupter_wiring.png"/>
+<img src="https://github.com/jconkli07/CircuitPython/blob/62241d3f26ff94e50bd7a05ae380ea1cb6ca0399/Files/photointerrupter_wiring.png"/>
 
 ### Reflection
 I used digitalio to sense the number of interrupts from the photointerrupter. x==y CHECKS whether x=y and returns true of false, x=y sets x equal to y. variable+=x sets variable equal to variable+x. time.monotonic starts counting and then doesn't stop, I used to to determine when 4 seconds had passed.
@@ -231,7 +231,7 @@ while True:
 <img src="https://github.com/jconkli07/CircuitPython/blob/113ffd12f4a13388e2e827ff222791c589bd1f18/Files/lcd.gif"/>
 
 ### Wiring
-<img src="https://github.com/jconkli07/CircuitPython/blob/fcf6362f6df3a11c4990f65ba9b9aac7934d2dc5/Files/lcd_wiring.png"/>
+<img src="https://github.com/jconkli07/CircuitPython/blob/62241d3f26ff94e50bd7a05ae380ea1cb6ca0399/Files/lcd_wiring.png"/>
 
 ### Reflection
 Capacitative touch can sense when you touch a wire. I used lcd.print(str(count)) to print the value of a variable set to a number. lcd.clear() clears lcd. "if touchio.TouchIn(board.A5).value:" will run if the wire in that pin is touched. 
