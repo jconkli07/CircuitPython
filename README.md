@@ -123,7 +123,7 @@ while True:
 <img src="https://github.com/jconkli07/CircuitPython/blob/62241d3f26ff94e50bd7a05ae380ea1cb6ca0399/Files/distance_sensor_wiring.png"/>
 
 ### Reflection
-<a href="https://www.desmos.com/calculator/2clk5c78xj">Link to Desmos graph modeling rbg change</a>
+<a href="https://www.desmos.com/calculator/2clk5c78xj">Link to Desmos graph modeling rbg change</a>  
 I had some issues because you cannot use float values in dot.fill() so it was giving me errors. max(x,y) outputs whichever number is highest, min(x,y) does opposite. I used max and min to constrain the rgb values to 0<x<255. I was able to reuse much of the code from the LED blink assignment, and then just add the distance sensor part. int(x) outputs x converted to an integer (it drops any decimals, for example 4.15 becomes 4). I partially simplified the equations so things like 255(20-dist)/15 became 17(20-dist). abs(x) returns the absolute value of the number, I used this to make the blue value increase and then decrease.
 
 [Back to Table of Contents](#Table-of-Contents)
