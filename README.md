@@ -144,7 +144,7 @@ from digitalio import DigitalInOut, Direction, Pull
 
 interrupter = DigitalInOut(board.D2)
 interrupter.direction = Direction.INPUT
-interrupter.pull = Pull.UP
+interrupter.pull = Pull.UP                  #Sets up photoresistor and pins
 initial = time.monotonic()
 
 counter = 0
@@ -152,16 +152,18 @@ counter = 0
 photo = False
 state = False
 
-start=time.monotonic()
+start=time.monotonic()      #Starts the "clock" which will run for as long as the program continues
 
 while True:
     photo=interrupter.value
     if photo and not state:
         counter+=1
-    state = photo
+    state = photo           #Above code checks for interrupts and increase counter by 1 each time there is one
     
     math = time.monotonic()/4
-    if math-int(math)==0:
+    if math==int(math):     #Takes the total amount of time the program has ran (in secs) and divides it by 4
+                            #Then it takes that number and checks if chopping all of the decimals off will change the number
+                            #If the numbers are equal it means that the number of seconds elapsed have been a multiple of 4
         print("The number of Interrupts is ", str(counter))
         time.sleep(.001)
 ```
