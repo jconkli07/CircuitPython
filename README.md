@@ -84,7 +84,8 @@ This assignment was a bit harder than the first one. I need to make sure that th
 ## CircuitPython_Distance_Sensor
 
 ### Description & Code
-The assignment was to make an LED shift from red to blue to green as an object got further away from a distance sensor.
+The assignment was to make an LED shift from red to blue to green as an object got further away from a distance sensor. The distance sensor shoots out ultrasonic waves and uses how they have changed whehn they bounce back (intensity, time to return, etc) to determine the distance from an object.
+
 ```python
 # Jay Conklin
 # Makes the built-in LED change colors based on how far an object is from the distance sensor.
