@@ -96,16 +96,16 @@ import neopixel
 
 sonar = adafruit_hcsr04.HCSR04(trigger_pin=board.D2, echo_pin=board.D3)
 dot = neopixel.NeoPixel(board.NEOPIXEL, 1)
-
 dot.brightness = 0.1
 
 while True:
     try:
-        dist = sonar.distance   #dist will be the distance of the object from the sensor
+        dist = sonar.distance   #Gets the distance and assigns it to the dist variable
         print((dist))
+        
+                                        #Max and min take the maximum/minimum of the 2 numbers given,
+                                        #they make sure that the output value won't be >255 or <0
         r = max(min(17*(20-dist),255),0)    #Makes the red value change from 255-0 as the distance goes from 5-20
-                                            #Max and min take the maximum/minimum of the 2 numbers given,
-                                            #they make sure that the output value won't be >255 or <0
         g = max(min(17*(dist-20),255),0)    #Makes the green value change from 0-255 as the distance goes from 20-35
         b = max(min(-abs(17*(20-dist))+255,255),0)  #Makes the blue value change go from 0-255 as the distance goes from 0-20
                                                     #and then makes it go back from 255-0 as the distance goes from 20-35
@@ -124,7 +124,7 @@ while True:
 <img src="https://github.com/jconkli07/CircuitPython/blob/62241d3f26ff94e50bd7a05ae380ea1cb6ca0399/Files/distance_sensor_wiring.png"/>
 
 ### Reflection
-I had some issues because you cannot use float values in dot.fill() so it was giving me errors. max(x,y) outputs whichever number is highest, min(x,y) does opposite. I was able to reuse much of the code from the LED blink assignment, and then just add the distance sensor part. int(x) outputs x converted to an integer (it drops any decimals, for example 4.15 becomes 4).
+I had some issues because you cannot use float values in dot.fill() so it was giving me errors. max(x,y) outputs whichever number is highest, min(x,y) does opposite. I used max and min to constrain the rgb values to 0<x<255. I was able to reuse much of the code from the LED blink assignment, and then just add the distance sensor part. int(x) outputs x converted to an integer (it drops any decimals, for example 4.15 becomes 4). I partially simplified the equations so things like 255(20-dist)/15 became 17(20-dist).
 
 [Back to Table of Contents](#Table-of-Contents)
 
