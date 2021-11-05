@@ -47,7 +47,8 @@ This was a pretty easy assignment for me, I found the code on the internet and m
 ## CircuitPython_Servo
 
 ### Description & Code
-This assignment was to make a servo roatate 180 degrees, and then back 180 degrees, and have it repeat.
+This assignment was to make a servo roatate 180 degrees, and then back 180 degrees, and have it repeat. This assignment teaches how to wire, code, and operate a servo with the metro express. Also more advanced programming concepts like for loops are used.
+
 ```python
 # Jay Conklin
 # Makes a servo rotate 180 degrees
@@ -84,7 +85,7 @@ This assignment was a bit harder than the first one. I need to make sure that th
 ## CircuitPython_Distance_Sensor
 
 ### Description & Code
-The assignment was to make an LED shift from red to blue to green as an object got further away from a distance sensor. The distance sensor shoots out ultrasonic waves and uses how they have changed whehn they bounce back (intensity, time to return, etc) to determine the distance from an object.
+The assignment was to make an LED shift from red to blue to green as an object got further away from a distance sensor. The distance sensor shoots out ultrasonic waves and uses how they have changed when they bounce back (intensity, time to return, etc) to determine the distance from an object. This assignment teaches how to wire and use distance senors. Also it dives into more advanced python with a lot of mathematical operators and variables. It builds on what we learned in the first assignment about changing the color of the LED.
 
 ```python
 # Jay Conklin
@@ -131,7 +132,7 @@ I had some issues because you cannot use float values in dot.fill() so it was gi
 ## CircuitPython_Photointerrupter
 
 ### Description & Code
-The assignment was to make code that would detect the number of times the photointerrupter has sensed an interrupt and display this count every 4 seconds.
+The assignment was to make code that would detect the number of times the photointerrupter has sensed an interrupt and display this count every 4 seconds. I used time.monotonic() to know when 4 seconds passed. This taught me about if statements and how to code for the photoresistor.
 
 ```python
 #Jay Conklin
@@ -175,14 +176,14 @@ while True:
 <img src="https://github.com/jconkli07/CircuitPython/blob/62241d3f26ff94e50bd7a05ae380ea1cb6ca0399/Files/photointerrupter_wiring.png"/>
 
 ### Reflection
-I used digitalio to sense the number of interrupts from the photointerrupter. x==y CHECKS whether x=y and returns true of false, x=y sets x equal to y. variable+=x sets variable equal to variable+x. time.monotonic starts counting and then doesn't stop, I used to to determine when 4 seconds had passed.
+I used digitalio to sense the number of interrupts from the photointerrupter. x==y CHECKS whether x=y and returns true of false, x=y sets x equal to y. variable+=x sets variable equal to variable+x. time.monotonic starts counting and then doesn't stop, I used to to determine when 4 seconds had passed. DO NOT LET THE + OR L WIRES TOUCH THE OUT WIRE IT WILL FRY THE PHOTORESISTOR. Use electrical tape to prevent it.
 
 [Back to Table of Contents](#Table-of-Contents)
 
 ## CircuitPython_LCD
 
 ### Description & Code
-The assignment is to have an LCD display a count that chages by 1 each time a wire is touched. Each time another wire is touched the direction in which it is counting switches.
+The assignment is to have an LCD display a count that chages by 1 each time a wire is touched. Each time another wire is touched the direction in which it is counting switches. I used capacitative touch to sense when the wires were touched. I learned how to code capacitative touh and the LCD. This teaches how to manage and debug more complicated and longer code.
 
 ```python
 #Jay Conklin
