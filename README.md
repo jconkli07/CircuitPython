@@ -169,7 +169,7 @@ while True:
 ```
 
 ### Evidence
-<img src="https://github.com/jconkli07/CircuitPython/blob/f3b06030b189e906cf269fa30414013dc1e97042/Files/photointerrupter.gif"/>
+<img src="https://github.com/jconkli07/CircuitPython/blob/5c7f11c6d55d759477bea77de701069a4c99ec07/Files/photointerrupter.gif"/>
 
 ### Wiring
 <img src="https://github.com/jconkli07/CircuitPython/blob/62241d3f26ff94e50bd7a05ae380ea1cb6ca0399/Files/photointerrupter_wiring.png"/>
