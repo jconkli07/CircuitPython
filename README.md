@@ -7,7 +7,6 @@
 * [CircuitPython_Photointerrupter](#CircuitPython_Photointerrupter)
 * [CircuitPython_LCD](#CircuitPython_LCD)
 * [Fun with RGB LEDs](#Fun_with_RGB_LEDs)
-* [Photointerrupters](#Photointerrupters)
 ---
 
 ## Hello_CircuitPython
@@ -247,53 +246,238 @@ Capacitative touch can sense when you touch a wire. I used lcd.print(str(count))
 ## Fun_with_RGB_LEDs
 
 ### Description & Code
-The assignment is to have an LCD display a count that chages by 1 each time a wire is touched. Each time another wire is touched the direction in which it is counting switches. I used capacitative touch to sense when the wires were touched. I learned how to code capacitative touh and the LCD. This teaches how to manage and debug more complicated and longer code.
+The assignment is to make 2 rgb LEDs blink, change colors, and do other actions. I achieved this through the use of classes, objects and moduels. This is the first assignment where we have dealt with these things, so I learned a lot about them from this.
 
+main.py code:
 ```python
-#Jay Conklin
-#Displays a count on the LCD that increases once every time a wire is touched.
-#If a different wire is touched it changes it to counting down instead of up, or vice versa.
-import board
-from lcd.lcd import LCD
-from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
+#From Lucy Gray
 import time
-import touchio
+import board
+from rgb import RGB
 
-i2c = board.I2C()
-lcd = LCD(I2CPCF8574Interface(i2c, 0x3f), num_rows=2, num_cols=16)      #Sets up the lcd board and tells code what pins it's in
+redLEDPin1 = board.D10
+greenLEDPin1 = board.D9
+blueLEDPin1 = board.D8
 
-touch_a5 = board.A5
-touch_A5 = touchio.TouchIn(touch_a5)    #Sets up capacitative touch for the counter wire
-touch_a0 = board.A0
-touch_A0 = touchio.TouchIn(touch_a0)    #Sets up capacitative touch for the up/down wire
+redLEDPin2 = board.D7
+greenLEDPin2 = board.D5
+blueLEDPin2 = board.D4  #D6 is using the same timer as D8,9,10.  Avoid!
 
-count = 0
-updown=1
+full = 65535
+half = (65535/5)
+
+myRGBled1 = RGB(redLEDPin1, greenLEDPin1, blueLEDPin1)
+myRGBled2 = RGB(redLEDPin2, greenLEDPin2, blueLEDPin2)
+
 
 while True:
-    if touch_A5.value:
-        count+=updown   #If counter wire is touched adds updown variable to the counter number
-                        #Updown will be 1 if going up or -1 if going down, so just adding
-                        #it to the counter will make it count 1 in the correct direction
-        lcd.clear()
-        if updown==1:
-            lcd.print("Up: ")
-        else:
-            lcd.print("Down: ")
-        lcd.print(str(count))   #Above section displays direction of counting and new count
-        while touch_A5.value:   #Waits until the wire is released to continue
-            time.sleep(.01)     #that holding down the wire does not increase the number over and over
+''' This file is the class-based version of making a single LED fade'''
+import time
+import board
+from rgb import RGB
 
-    if touch_A0.value:
-        updown=-updown          #If direction wire touched changes updown from 1 to -1 or vice versa
-        while touch_A0.value:
-            time.sleep(.1)
-        lcd.clear()
-        if updown==1:
-            lcd.print("Up: ")
-        else:
-            lcd.print("Down: ")
-        lcd.print(str(count))   #Above section displays the new direction of counting and current count (the count stays the same)
+redLEDPin1 = board.D10
+greenLEDPin1 = board.D9
+blueLEDPin1 = board.D8
+
+redLEDPin2 = board.D7
+greenLEDPin2 = board.D5
+blueLEDPin2 = board.D4  #D6 is using the same timer as D8,9,10.  Avoid!
+
+full = int(65535)
+half = int(65535/2)
+
+myRGBled1 = RGB(redLEDPin1, greenLEDPin1, blueLEDPin1)
+myRGBled2 = RGB(redLEDPin2, greenLEDPin2, blueLEDPin2)
+
+
+while True:
+    myRGBled1.blue()
+    myRGBled2.yellow()
+    time.sleep(1)
+    myRGBled1.blue(half)
+    myRGBled2.yellow(half)
+    time.sleep(1)
+    myRGBled1.off()
+    myRGBled2.off()
+    time.sleep(1)
+
+    myRGBled1.red()
+    myRGBled2.cyan()
+    time.sleep(1)
+    myRGBled1.off()
+    myRGBled2.off()
+    time.sleep(1)
+
+    myRGBled1.green(half)
+    myRGBled2.magenta(half)
+    time.sleep(1)
+    myRGBled1.off()
+    myRGBled2.off()
+    time.sleep(1)
+
+    myRGBled1.white(half)
+    myRGBled2.white(half)
+    time.sleep(.25)
+    myRGBled1.white()
+    myRGBled2.white()
+    time.sleep(.25)
+    myRGBled1.white(half)
+    myRGBled2.white(half)
+    time.sleep(.25)
+    myRGBled1.white()
+    myRGBled2.white()
+    time.sleep(.25)
+    myRGBled1.white(half)
+    myRGBled2.white(half)
+    time.sleep(.25)
+    myRGBled1.white()
+    myRGBled2.white()
+    time.sleep(.25)
+    myRGBled1.white(half)
+    myRGBled2.white(half)
+    time.sleep(.25)
+    myRGBled1.white()
+    myRGBled2.white()
+    time.sleep(.25)
+    myRGBled1.off()
+    myRGBled2.off()
+    time.sleep(5)
+
+# extra spicy (optional) part
+# you should replace "rate1" with a real number...
+    myRGBled1.rainbow(2) # Fade through the colors of the rainbow at the given rate.  Oooooh, pretty!
+    myRGBled2.rainbow(.5) # Fade through the colors of the rainbow at the given rate.  Oooooh, pretty!
+    time.sleep(5)
+```
+
+rgb.py code:
+```python
+#From Lucy Gray
+import time
+import board
+import pwmio
+import digitalio
+
+lightBulb = digitalio.DigitalInOut(board.D13)       # I moved my RGBLED power wire from 5v
+lightBulb.direction = digitalio.Direction.OUTPUT    # and plugged it into D13.  I'll explain later.
+
+class LED:      # It's propper coding to always write a line explaining a class
+                # with a "docstring."   Like this:
+    '''LED is a class designed for a single color LED to fade in and out'''
+
+    def __init__(self, ledpin, name):
+        # init is like void Setup() from arduino.  Initialize your pins here
+        self.led = pwmio.PWMOut(ledpin, frequency=5000, duty_cycle=0)
+        self.name = name
+
+    def fadedown(self): # Fades LED from bright to dim
+        for i in range(255):
+            if i < (255/2):
+                self.led.duty_cycle = int(i * 65535 / (255/2))
+            print(self.name, ", ", self.led.duty_cycle)
+            time.sleep(0.01)
+
+    def fadeup(self):  # Fades LED from dim to bright
+        for i in range(255):
+            if i > (255/2):
+                self.led.duty_cycle = 65535 - int((i - (255/2)) * 65535 / (255/2))
+            print(self.name, ", ", self.led.duty_cycle)
+            time.sleep(0.01)
+
+    def on(self, brightness=65535):  # Remember "on" means duty cycles < 65535
+        self.led.duty_cycle = 65535 - brightness  # these are reversed!!! 
+        # rgb leds pull current the opposite way as you would expect
+        lightBulb.value = 65535
+
+
+    def off(self): # "off" means duty cycle should be full.
+        self.led.duty_cycle = 65535
+
+
+class RGB:
+    '''this class should impliment all 3 pins together to control an RGB LED - up until here is Mr. H's'''
+    from rgb import LED  # use methods set up in led, like on, off
+
+    def __init__(self, redPin, greenPin, bluePin):
+        self.myRedLED = LED(redPin, "red")  # initialise ledpins using class LED
+        self.myBlueLED = LED(bluePin, "blue")
+        self.myGreenLED = LED(greenPin, "green")
+
+    def blue(self, brightness=65535):
+        # Notice the brightness=65535?  Thats an OPTIONAL parameter!  So in main.py,
+        # you can call "RGBLED1.blue() for full brightness, or "RGBLED1.blue(half) to
+        # make it dimmer!
+        self.myBlueLED.on(brightness)  # using brightness, otherwise it won't change
+        self.myGreenLED.off()
+        self.myRedLED.off()
+
+    def yellow(self, brightness=65535):
+        self.myBlueLED.off()
+        self.myGreenLED.on(brightness)  # yes, yellow is green and red. gross
+        self.myRedLED.on(brightness)
+
+    def red(self, brightness=65535):
+        self.myBlueLED.off()
+        self.myGreenLED.off()
+        self.myRedLED.on(brightness)
+
+    def cyan(self, brightness=65535):
+        self.myBlueLED.on(brightness)  # color theory
+        self.myGreenLED.on(brightness)
+        self.myRedLED.off()
+
+    def green(self, brightness=65535):
+        self.myBlueLED.off()
+        self.myGreenLED.on(brightness)
+        self.myRedLED.off()
+
+    def magenta(self, brightness=65535):
+        self.myBlueLED.on(brightness)
+        self.myGreenLED.off()
+        self.myRedLED.on(brightness)
+
+    def white(self, brightness=65535):
+        self.myBlueLED.on(brightness)
+        self.myGreenLED.on(brightness)
+        self.myRedLED.on(brightness)
+    
+    def rainbow(self, rate):
+        self.myBlueLED.off()  # red
+        self.myGreenLED.off()
+        self.myRedLED.on()
+        time.sleep(rate)  # time sleep value equal to the rate defined in main
+        self.myBlueLED.off()  # yellow
+        self.myGreenLED.on()
+        self.myRedLED.on()
+        time.sleep(rate)
+        self.myBlueLED.off()  # green
+        self.myGreenLED.on()
+        self.myRedLED.off()
+        time.sleep(rate)
+        self.myBlueLED.on()
+        self.myGreenLED.on()  # cyan
+        self.myRedLED.off()
+        time.sleep(rate)
+        self.myBlueLED.on()  # blue
+        self.myGreenLED.off()
+        self.myRedLED.off()
+        time.sleep(rate)
+        self.myBlueLED.on()  # magenta
+        self.myGreenLED.off()
+        self.myRedLED.on()
+        time.sleep(rate)
+        self.myBlueLED.on()  # white
+        self.myGreenLED.on()
+        self.myRedLED.on()
+        time.sleep(rate)
+
+
+    def off(self):
+        self.myBlueLED.off()
+        self.myGreenLED.off()
+        self.myRedLED.off()
+        lightBulb.value = 0
 ```
 
 ### Evidence
@@ -303,69 +487,6 @@ while True:
 <img src="https://github.com/jconkli07/CircuitPython/blob/62241d3f26ff94e50bd7a05ae380ea1cb6ca0399/Files/lcd_wiring.png"/>
 
 ### Reflection
-Capacitative touch can sense when you touch a wire. I used lcd.print(str(count)) to print the value of a variable set to a number. lcd.clear() clears lcd. "if touchio.TouchIn(board.A5).value:" will run if the wire in that pin is touched. 
 
-[Back to Table of Contents](#Table-of-Contents)
-
-## Photointerrupters
-
-### Description & Code
-The assignment is to have an LCD display a count that chages by 1 each time a wire is touched. Each time another wire is touched the direction in which it is counting switches. I used capacitative touch to sense when the wires were touched. I learned how to code capacitative touh and the LCD. This teaches how to manage and debug more complicated and longer code.
-
-```python
-#Jay Conklin
-#Displays a count on the LCD that increases once every time a wire is touched.
-#If a different wire is touched it changes it to counting down instead of up, or vice versa.
-import board
-from lcd.lcd import LCD
-from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
-import time
-import touchio
-
-i2c = board.I2C()
-lcd = LCD(I2CPCF8574Interface(i2c, 0x3f), num_rows=2, num_cols=16)      #Sets up the lcd board and tells code what pins it's in
-
-touch_a5 = board.A5
-touch_A5 = touchio.TouchIn(touch_a5)    #Sets up capacitative touch for the counter wire
-touch_a0 = board.A0
-touch_A0 = touchio.TouchIn(touch_a0)    #Sets up capacitative touch for the up/down wire
-
-count = 0
-updown=1
-
-while True:
-    if touch_A5.value:
-        count+=updown   #If counter wire is touched adds updown variable to the counter number
-                        #Updown will be 1 if going up or -1 if going down, so just adding
-                        #it to the counter will make it count 1 in the correct direction
-        lcd.clear()
-        if updown==1:
-            lcd.print("Up: ")
-        else:
-            lcd.print("Down: ")
-        lcd.print(str(count))   #Above section displays direction of counting and new count
-        while touch_A5.value:   #Waits until the wire is released to continue
-            time.sleep(.01)     #that holding down the wire does not increase the number over and over
-
-    if touch_A0.value:
-        updown=-updown          #If direction wire touched changes updown from 1 to -1 or vice versa
-        while touch_A0.value:
-            time.sleep(.1)
-        lcd.clear()
-        if updown==1:
-            lcd.print("Up: ")
-        else:
-            lcd.print("Down: ")
-        lcd.print(str(count))   #Above section displays the new direction of counting and current count (the count stays the same)
-```
-
-### Evidence
-<img src="https://github.com/jconkli07/CircuitPython/blob/113ffd12f4a13388e2e827ff222791c589bd1f18/Files/lcd.gif"/>
-
-### Wiring
-<img src="https://github.com/jconkli07/CircuitPython/blob/62241d3f26ff94e50bd7a05ae380ea1cb6ca0399/Files/lcd_wiring.png"/>
-
-### Reflection
-Capacitative touch can sense when you touch a wire. I used lcd.print(str(count)) to print the value of a variable set to a number. lcd.clear() clears lcd. "if touchio.TouchIn(board.A5).value:" will run if the wire in that pin is touched. 
 
 [Back to Table of Contents](#Table-of-Contents)
