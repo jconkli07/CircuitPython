@@ -481,7 +481,7 @@ class RGB:
 ```
 
 ### Evidence
-<img src="https://github.com/jconkli07/CircuitPython/blob/113ffd12f4a13388e2e827ff222791c589bd1f18/Files/lcd.gif"/>
+<img src="https://github.com/jconkli07/CircuitPython/blob/a3dbeb8bf56a4bf3245ded3b3b6faadc78095e65/Files/rbg.gif"/>
 
 ### Wiring
 <img src="https://github.com/jconkli07/CircuitPython/blob/4b8832a3ba7e4f7e45fb653fc2c6664be54c6461/Files/rgb_wiring.jpeg"/>
