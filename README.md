@@ -484,7 +484,7 @@ class RGB:
 <img src="https://github.com/jconkli07/CircuitPython/blob/113ffd12f4a13388e2e827ff222791c589bd1f18/Files/lcd.gif"/>
 
 ### Wiring
-<img src="https://github.com/jconkli07/CircuitPython/blob/68dd13b678288005f5dd1fec93a7161d729d387a/Files/COM_wiring.png"/>
+<img src="https://github.com/jconkli07/CircuitPython/blob/4b8832a3ba7e4f7e45fb653fc2c6664be54c6461/Files/rgb_wiring.jpeg"/>
 
 ### Reflection
 This assignment was very useful and I feel that I learned a lot about Circuit Python from it. A module is somethinhg that is imported, at the top of the code, and adds additional functions/commands to Circuit Python. A class is like creating your own custom module. You can determine special commands, traits, and other things about it. An object is an instance of a class with specific traits. For example, ther could be a class of Dog with the attributes of color and breed, and an object instance of that class would be Zeke, who is black and a labrador.
